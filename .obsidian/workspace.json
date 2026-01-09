@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "hardware/smu-introduction.md",
+                "file": "hardware/chambers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "smu-introduction"
+              "title": "chambers"
+            }
+          },
+          {
+            "id": "5ece0f728f36c575",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "software/data/parameter-file.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "parameter-file"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -183,33 +198,42 @@
       "bases:Create new base": false
     }
   },
-  "active": "8ac512d6681c414a",
+  "active": "5ece0f728f36c575",
   "lastOpenFiles": [
-    "software/Untitled",
+    "software/data/tracking-file.md",
+    "software/data/jv-file.md",
+    "software/data/index.md",
+    "software/data/parameter-file.md",
+    "software/starting-a-measurement.md",
+    "software/settings.md",
+    "software/index.md",
+    "software/sensors/Sensor.md",
+    "software/data",
+    "software/sensors/Environments.md",
+    "hardware/light-soaker.md",
+    "hardware/chambers.md",
+    "hardware/sample-holders.md",
+    "hardware/smu-introduction.md",
+    "docs/assets/img/4-wire-sensing.png",
+    "hardware/new-smu-install.md",
+    "docs/assets/img/smu-install.png",
+    "docs/assets/img/summary-table-ready-to-start.png",
+    "docs/assets/img/smu-order.png",
+    "docs/assets/img/main-settings.png",
+    "docs/assets/img/mppt-flowchart.png",
+    "docs/assets/img/main-software3.png",
+    "docs/assets/img/main-software2.png",
+    "docs/assets/img/main-software1.png",
+    "docs/index.md",
     "software/files",
     "docs/assets/misc files/A3080C70",
-    "software/sensors/Environments.md",
-    "software/sensors/Sensor.md",
-    "hardware/smu-introduction.md",
-    "hardware/new-smu-install.md",
     "docs/assets/img/db37-signal-out-pinout.png",
     "docs/assets/misc files/DB37 Signal Out Pinout.xlsx",
     "docs/assets/misc files/C2B60C70",
     "docs/assets/misc files/~$DB37 Signal Out Pinout.xlsx",
     "docs/assets/misc files",
     "docs/assets/New folder",
-    "{0ECE50E5-2523-484A-8FE8-14C0B8420A22}.png",
-    "{27FE1B06-7BDA-4624-8BB9-DF77CDA5AA96}.png",
-    "docs/assets/img/sensor-manager.png",
-    "docs/assets/img/Sensor Manager.png",
-    "docs/assets/img/smu-order.png",
-    "docs/assets/img/DB25-Pinout.png",
-    "docs/index.md",
     "software/sensors",
-    "hardware",
-    "software",
-    "Pasted image 20251203124232.png",
-    "Pasted image 20251203124239.png",
-    "Pasted image 20251203124231.png"
+    "hardware"
   ]
 }

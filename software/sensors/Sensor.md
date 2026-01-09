@@ -5,5 +5,9 @@ Sensors are managed in the "Sensor Manager" window. It is accessed from the main
 
 ### Managing sensors ###
 
-Sensors from sample holder (managed by the [sample holder tool]) are added automatically as they are added by the sample holder tool. To add a custom analog sensor, click on the + button and follow the instruction of the wizard. The channel is linked to the sensor board adapters present on the system. To choose the channel, please follow the pinout as shown below.
+Sensors from sample holder (managed by the [sample holder tool]) are added automatically as they are added by the sample holder tool. To add a custom analog sensor, click on the + button and follow the instruction of the wizard. 
+
+
+The channel is linked to the sensor board adapters present on the system. To choose the channel, please follow the pinout as shown below.
+
 ![[db37-signal-out-pinout.png]]
