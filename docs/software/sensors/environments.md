@@ -1,9 +1,10 @@
 Associating sensors to your devices is done through the use of environments. Individual sensors can be associated to one or more environments. Each device can then be associated to its specific environment. All sensor data of the device's environment is saved into its data files.
 The section below describes how to create, modify and delete environments and how to link them to your devices.
 
-### Creating an environment###
+### Creating an environment ###
 
 To create a new environment and add sensors to it follow these steps
+
 1. Open the sensor manager from the main window.
 2. Click the "Add environment"  button and give it a name.
 3. Select the sensor you wish to add to the environment from the sensor list.

@@ -1,7 +1,9 @@
-site_name: Arkeo Multichannel Manual (v2.3.4)
+site_name: Arkeo Multichannel Manual (v2.3.5)
 
 theme:
   name: material
+  icon:
+    annotation: material/arrow-right-circle 
   features:
     - navigation.expand
     - navigation.sections
@@ -9,12 +11,13 @@ theme:
     - navigation.top
     - search.highlight
     - search.suggest
+    - content.footnote.tooltips
     - content.code.annotate
     - content.code.copy
     - content.image.zoom
-    - versioning  # REQUIRED for mike
+    - content.action.copy
+    - content.icons
     
-
 markdown_extensions:
   - toc:
       permalink: true
@@ -28,13 +31,44 @@ markdown_extensions:
   - pymdownx.superfences
   - attr_list
   - md_in_html
+  - footnotes
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 nav:
   - Introduction: index.md
-  - Source Meter Boards: smu-introduction.md
-  - Installating a New SMU: new-smu-install.md
+  - Hardware:
+    - Introduction: hardware/index.md
+    - Source Meter Boards: hardware/smu-introduction.md
+    - Installating a New SMU: hardware/new-smu-install.md
+    - Sample Holders: hardware/sample-holders.md
+    - Environmental Chambers: hardware/chambers.md
+#    - Light Sources: hardware/light-soaker.md
+  - Software:
+    - Introduction: software/index.md
+    - Main Interface: software/interface.md
+    - Measurement:
+      - Starting a Measurement: software/measurement/starting-a-measurement.md
+      - Process: software/measurement-process.md
+      - JV: software/measurement/jv-scan.md
+      - Tracking: software/measurement/tracking.md
+    - Settings: software/settings.md
+    - Sample Holder Tool: software/sample-holder-tool.md
+    - Data:
+      - Structure: software/data/index.md
+      - JV File: software/data/jv-file.md
+      - Parameter File: software/data/parameter-file.md
+      - Tracking File: software/data/tracking-file.md
+    - Environment:
+      - Sensors: software/sensors/sensor.md
+      - Environment: software/sensors/environments.md
+    - Day-Night Cycling: software/day-night.md
+  - Changelog: software/changelog.md
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
@@ -42,8 +76,6 @@ extra_javascript:
   - js/katex-init.js
 
 extra_css:
+  - assets/css/compact-lists.css
+  - assets/css/compact-tables.css
   - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
-
-extra:
-  version:
-    provider: mike
