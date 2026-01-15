@@ -54,7 +54,7 @@ nav:
     - Main Interface: software/interface.md
     - Measurement:
       - Starting a Measurement: software/measurement/starting-a-measurement.md
-      - Process: software/measurement-process.md
+      - Process: software/measurement/measurement-process.md
       - JV: software/measurement/jv-scan.md
       - Tracking: software/measurement/tracking.md
     - Settings: software/settings.md

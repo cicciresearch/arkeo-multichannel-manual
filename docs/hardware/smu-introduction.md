@@ -30,7 +30,7 @@ This configuration is particularly important for low-voltage devices, low-resist
 
 ---
 
-## Extending the Voltage Range to 20 V
+## 20 V Extension
 
 A single SMU can apply up to ±10 V relative to ground. For applications requiring a wider voltage range, ARKEO supports a 20 V differential configuration. This is achieved by using two SMUs in series: one drives the positive terminal, and the other drives the negative terminal with an equal but opposite voltage. The device voltage then becomes the difference between the two.
 

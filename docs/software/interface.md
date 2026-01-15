@@ -10,6 +10,30 @@ The images below show the primary sections of the software interface.
 
 ---
 
+## Toolbar Overview
+
+The toolbar provides quick access to frequently used functions.  
+Select an item below to navigate to the corresponding documentation page.
+
+- <img src="/assets/img/toolbar-icons/settings_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Settings** – Configure channels. [Go to settings →](settings.md)
+
+- <img src="/assets/img/toolbar-icons/holder_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Holder** – Manage sample-holder layouts and device positioning. [Go to sample holder tool →](sample-holder-tool.md)
+
+- <img src="/assets/img/toolbar-icons/results_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Results** – View and interpret measurement results and exported data. [Go to results →](data/index.md)
+
+- <img src="/assets/img/toolbar-icons/sensors_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Sensors** – Overview of environmental sensors and how they integrate with measurements. [Go to sensors →](sensors/sensor.md)
+
+- <img src="/assets/img/toolbar-icons/mode_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Mode** – *Select measurement or operation mode.*  
+
+- <img src="/assets/img/toolbar-icons/log_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Log** – *View system or measurement logs.*  
+
+- <img src="/assets/img/toolbar-icons/help_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Help** – *User help or documentation overview (this website)*  
+
+- <img src="/assets/img/toolbar-icons/api_24dp_515151.svg" width="24" style="vertical-align: middle;"> **API** – Documentation for integrating ARKEO programmatically  
+  [Open API documentation →](https://cicciresearch.github.io/arkeo-multichannel-api-docs/)
+
+---
+
 ## Summary Table
 
 At the top of the main window, the summary table displays one row per channel. Each row indicates:
@@ -18,8 +42,6 @@ At the top of the main window, the summary table displays one row per channel. E
 - the assigned user  
 - the device name  
 - the current measurement mode (JV scan, tracking, idle, etc.)  
-- the latest measured JV parameters  
-- any warnings or errors reported by the system  
 
 The table updates continuously, allowing multiple users to monitor their channels simultaneously.
 
@@ -38,19 +60,11 @@ Four channels are shown together in each graph window, matching the organization
 
 ---
 
-## Channel Structure
-
-Each SMU contains four independent channels, and this structure is mirrored in the software. Channels are grouped visually, making it clear which measurements belong to the same SMU board. This helps diagnose issues such as cable problems or contact failures, which often affect an entire group of four channels rather than a single channel.
-
-Channels belonging to different SMUs are displayed in different groups, but they operate independently. Multiple users can control different sets of channels at the same time.
-
----
-
 ## Measurement Status
 
 During a measurement, the interface shows whether the system is performing a JV scan, running maximum power point tracking, waiting for the next JV interval, or standing by. Tracking mode includes updates of the measured voltage, current, and power, along with automatic corrections applied by the control algorithm.
 
-When a JV scan completes, the extracted parameters—such as Voc, Jsc, V_MPP, J_MPP, and fill factor—are added to the parameter graph. This provides immediate feedback about device stability and performance changes over time.
+When a JV scan completes, the extracted parameters—such as Voc, Jsc, V_MPP, J_MPP, and fill factor are added to the parameter graph. This provides immediate feedback about device stability and performance changes over time.
 
 ---
 
