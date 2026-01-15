@@ -15,21 +15,21 @@ The images below show the primary sections of the software interface.
 The toolbar provides quick access to frequently used functions.  
 Select an item below to navigate to the corresponding documentation page.
 
-- <img src="/assets/img/toolbar-icons/settings_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Settings** – Configure channels. [Go to settings →](settings.md)
+- <img src="assets/img/toolbar-icons/settings_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Settings** – Configure channels. [Go to settings →](settings.md)
 
-- <img src="/assets/img/toolbar-icons/holder_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Holder** – Manage sample-holder layouts and device positioning. [Go to sample holder tool →](sample-holder-tool.md)
+- <img src="assets/img/toolbar-icons/holder_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Holder** – Manage sample-holder layouts and device positioning. [Go to sample holder tool →](sample-holder-tool.md)
 
-- <img src="/assets/img/toolbar-icons/results_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Results** – View and interpret measurement results and exported data. [Go to results →](data/index.md)
+- <img src="assets/img/toolbar-icons/results_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Results** – View and interpret measurement results and exported data. [Go to results →](data/index.md)
 
-- <img src="/assets/img/toolbar-icons/sensors_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Sensors** – Overview of environmental sensors and how they integrate with measurements. [Go to sensors →](sensors/sensor.md)
+- <img src="assets/img/toolbar-icons/sensors_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Sensors** – Overview of environmental sensors and how they integrate with measurements. [Go to sensors →](sensors/sensor.md)
 
-- <img src="/assets/img/toolbar-icons/mode_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Mode** – *Select measurement or operation mode.*  
+- <img src="assets/img/toolbar-icons/mode_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Mode** – *Select measurement or operation mode.*  
 
-- <img src="/assets/img/toolbar-icons/log_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Log** – *View system or measurement logs.*  
+- <img src="assets/img/toolbar-icons/log_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Log** – *View system or measurement logs.*  
 
-- <img src="/assets/img/toolbar-icons/help_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Help** – *User help or documentation overview (this website)*  
+- <img src="assets/img/toolbar-icons/help_24dp_515151.svg" width="24" style="vertical-align: middle;"> **Help** – *User help or documentation overview (this website)*  
 
-- <img src="/assets/img/toolbar-icons/api_24dp_515151.svg" width="24" style="vertical-align: middle;"> **API** – Documentation for integrating ARKEO programmatically  
+- <img src="assets/img/toolbar-icons/api_24dp_515151.svg" width="24" style="vertical-align: middle;"> **API** – Documentation for integrating ARKEO programmatically  
   [Open API documentation →](https://cicciresearch.github.io/arkeo-multichannel-api-docs/)
 
 ---
