@@ -14,7 +14,7 @@ theme:
     - content.footnote.tooltips
     - content.code.annotate
     - content.code.copy
-    - content.image.zoom
+    - content.image
     - content.action.copy
     - content.icons
     
@@ -48,7 +48,7 @@ nav:
     - Installating a New SMU: hardware/new-smu-install.md
     - Sample Holders: hardware/sample-holders.md
     - Environmental Chambers: hardware/chambers.md
-#    - Light Sources: hardware/light-soaker.md
+    - Light Sources: hardware/light-soaker.md
   - Software:
     - Introduction: software/index.md
     - Main Interface: software/interface.md
@@ -69,6 +69,11 @@ nav:
       - Environment: software/sensors/environments.md
     - Day-Night Cycling: software/day-night.md
   - Changelog: software/changelog.md
+
+plugins:
+  - search
+  - glightbox:
+      manual: true
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
