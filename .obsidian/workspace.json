@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/software/measurement/jv-scan.md",
+                "file": "docs/hardware/sample-holders.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "jv-scan"
+              "title": "sample-holders"
             }
           }
         ]
@@ -184,8 +184,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "8ac512d6681c414a",
+  "active": "5ece0f728f36c575",
   "lastOpenFiles": [
+    "docs/hardware/smu-introduction.md",
+    "docs/hardware/sample-holders.md",
+    "docs/software/measurement/jv-scan.md",
+    "docs/assets/img/holder-pcb",
     "docs/software/{E88CE2A4-C13D-45F4-B130-8A2411BC9719}.png",
     "docs/assets/img/sample-holder-tool.png",
     "docs/assets/img/pao-shape.png",
@@ -195,7 +199,6 @@
     "docs/assets/misc files/~$jv scan.pptx",
     "docs/assets/img/jv-scan.png",
     "docs/software/measurement/tracking.md",
-    "docs/software/measurement/jv-scan.md",
     "docs/software/measurement/starting-a-measurement.md",
     "docs/software/day-night.md",
     "docs/software/measurement",
@@ -207,10 +210,8 @@
     "docs/software/sensors/environments.md",
     "docs/hardware/new-smu-install.md",
     "docs/hardware/index.md",
-    "docs/hardware/smu-introduction.md",
     "docs/hardware/light-soaker.md",
     "docs/hardware/chambers.md",
-    "docs/hardware/sample-holders.md",
     "docs/software/data/index.md",
     "docs/assets/img/smu-install.png",
     "docs/assets/css/settings-table.css",
@@ -225,12 +226,10 @@
     "docs/assets/img/main-settings.png",
     "docs/software/data/tracking-file.md",
     "docs/software/data/parameter-file.md",
-    "docs/software/sensors",
     "hardware/smu-introduction.md",
     "hardware/new-smu-install.md",
     "hardware/sample-holders.md",
     "hardware/chambers.md",
-    "software/sensors/Sensor.md",
-    "docs/assets/img/4-wire-sensing.png"
+    "software/sensors/Sensor.md"
   ]
 }

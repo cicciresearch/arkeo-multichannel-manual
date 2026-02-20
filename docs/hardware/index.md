@@ -37,7 +37,7 @@ Use the cards below to explore each subsystem.
     **Sample Holders**
 
     Supports device mounting, electrical contact, and efficient sample exchange during high-throughput testing.  
-    [Sample holders →](sample-holders.md)
+    [Sample holders →](sample-holder/sample-holders.md)
 
 -   :material-fridge-outline:{ .lg .middle }  
     **Environmental Chambers** 

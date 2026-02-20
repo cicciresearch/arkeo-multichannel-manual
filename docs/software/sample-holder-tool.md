@@ -1,4 +1,4 @@
-When using a [sample holder](../hardware/sample-holders.md), it can become confusing which devices are connected to which channels. Instead of using the [regular settings](settings.md) window, it is recommended to use the sample holder UI. With this graphical user interface, you can easily select the correct devices without having to worry about associating the correct channel
+When using a [sample holder](../hardware/sample-holder/sample-holders.md), it can become confusing which devices are connected to which channels. Instead of using the [regular settings](settings.md) window, it is recommended to use the sample holder UI. With this graphical user interface, you can easily select the correct devices without having to worry about associating the correct channel
 
 ![holder-ui](../assets/img/sample-holder-tool.png)
 

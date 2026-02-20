@@ -114,7 +114,7 @@ Detailed guides for installing and using ARKEO-compatible hardware:
 
 - [SMU Installation](hardware/new-smu-install.md)  
 - [SMU Introduction](hardware/smu-introduction.md)  
-- [Sample Holders](hardware/sample-holders.md)  
+- [Sample Holders](hardware/sample-holder/sample-holders.md)  
 - [Environmental Chambers](hardware/chambers.md)  
 - [Light Soaker](hardware/light-soaker.md)
 

@@ -11,4 +11,4 @@ To install an SMU board, simply slide it into the rails in the designated slot. 
 ![smu-install](../assets/img/smu-install.png)
 
 [← Back to Hardware Overview](index.md)  
-[Continue to Sample Holders →](sample-holders.md)
+[Continue to Sample Holders →](sample-holder/sample-holders.md)

@@ -46,7 +46,7 @@ nav:
     - Introduction: hardware/index.md
     - Source Meter Boards: hardware/smu-introduction.md
     - Installating a New SMU: hardware/new-smu-install.md
-    - Sample Holders: hardware/sample-holders.md
+    - Sample Holders: hardware/sample-holder/sample-holders.md
     - Environmental Chambers: hardware/chambers.md
     - Light Sources: hardware/light-soaker.md
   - Software:
@@ -74,6 +74,7 @@ plugins:
   - search
   - glightbox:
       manual: true
+  - macros
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
@@ -83,4 +84,5 @@ extra_javascript:
 extra_css:
   - assets/css/compact-lists.css
   - assets/css/compact-tables.css
+  - assets/css/extra.css
   - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
