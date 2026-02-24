@@ -26,6 +26,9 @@
     
       <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
       
 
   
@@ -76,7 +79,14 @@
         </style></head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -127,6 +137,32 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -1291,10 +1327,10 @@
 <p>A sample holder is a custom PCB with several spring-loaded probes positioned according to the device structure. The traces connect to a custom connector, which in turn connects through a cable back to the <a href="../../smu-introduction/">source measure units</a>. Devices on a sample holder are usually back-contacted. This simplifies the design of the sample holder and avoids having the contact probes block the incident light. Devices are pressed onto the spring-loaded contacts using a metal mask with openings for the incident light. The mask can be fixed in place using screws or magnets depending on the design.</p>
 <h2 id="sample-holder-example-designs">Sample holder example designs<a class="headerlink" href="#sample-holder-example-designs" title="Permanent link">¶</a></h2>
 <p>Below you can find several realized designs.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><input id="__tabbed_1_6" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">1 pixel</label><label for="__tabbed_1_2">2 pixels</label><label for="__tabbed_1_3">3 pixels</label><label for="__tabbed_1_4">4 pixels</label><label for="__tabbed_1_5">6 pixels</label><label for="__tabbed_1_6">8 pixels</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="1-pixel" name="__tabbed_1" type="radio"><input id="2-pixels" name="__tabbed_1" type="radio"><input id="3-pixels" name="__tabbed_1" type="radio"><input id="4-pixels" name="__tabbed_1" type="radio"><input id="6-pixels" name="__tabbed_1" type="radio"><input id="8-pixels" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="1-pixel">1 pixel</label><label for="2-pixels">2 pixels</label><label for="3-pixels">3 pixels</label><label for="4-pixels">4 pixels</label><label for="6-pixels">6 pixels</label><label for="8-pixels">8 pixels</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">1x1</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="1x1" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="1x1">1x1</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><img alt="1x1" src="../1%20pixel/1x1.png"></p>
@@ -1303,7 +1339,7 @@
 </div>
 </div>
 <div class="tabbed-block">
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">1x2</label><label for="__tabbed_3_2">2x1</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="1x2" name="__tabbed_3" type="radio"><input id="2x1" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="1x2">1x2</label><label for="2x1">2x1</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><img alt="1x2" src="../2%20pixels/1x2.png"></p>
@@ -1315,7 +1351,7 @@
 </div>
 </div>
 <div class="tabbed-block">
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">3x1</label><label for="__tabbed_4_2">3x1s</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="3x1" name="__tabbed_4" type="radio"><input id="3x1s" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="3x1">3x1</label><label for="3x1s">3x1s</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><img alt="3x1" src="../3%20pixels/3x1.png"></p>
@@ -1327,7 +1363,7 @@
 </div>
 </div>
 <div class="tabbed-block">
-<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><input id="__tabbed_5_3" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">2x2</label><label for="__tabbed_5_2">3+1</label><label for="__tabbed_5_3">4x1</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="2x2" name="__tabbed_5" type="radio"><input id="31" name="__tabbed_5" type="radio"><input id="4x1" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="2x2">2x2</label><label for="31">3+1</label><label for="4x1">4x1</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><img alt="2x2" src="../4%20pixels/2x2.png"></p>
@@ -1342,7 +1378,7 @@
 </div>
 </div>
 <div class="tabbed-block">
-<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><input id="__tabbed_6_3" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">3x2</label><label for="__tabbed_6_2">3x2m</label><label for="__tabbed_6_3">3x2s</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="3x2" name="__tabbed_6" type="radio"><input id="3x2m" name="__tabbed_6" type="radio"><input id="3x2s" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="3x2">3x2</label><label for="3x2m">3x2m</label><label for="3x2s">3x2s</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><img alt="3x2" src="../6%20pixels/3x2.png"></p>
@@ -1357,7 +1393,7 @@
 </div>
 </div>
 <div class="tabbed-block">
-<div class="tabbed-set tabbed-alternate" data-tabs="7:5"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><input id="__tabbed_7_3" name="__tabbed_7" type="radio"><input id="__tabbed_7_4" name="__tabbed_7" type="radio"><input id="__tabbed_7_5" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">4x2</label><label for="__tabbed_7_2">4x2l</label><label for="__tabbed_7_3">4x2m</label><label for="__tabbed_7_4">4x2s</label><label for="__tabbed_7_5">8o</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:5"><input checked="checked" id="4x2" name="__tabbed_7" type="radio"><input id="4x2l" name="__tabbed_7" type="radio"><input id="4x2m" name="__tabbed_7" type="radio"><input id="4x2s" name="__tabbed_7" type="radio"><input id="8o" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="4x2">4x2</label><label for="4x2l">4x2l</label><label for="4x2m">4x2m</label><label for="4x2s">4x2s</label><label for="8o">8o</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><img alt="4x2" src="../8%20pixels/4x2.png"></p>

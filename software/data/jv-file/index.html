@@ -26,6 +26,9 @@
     
       <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
       
 
   
@@ -76,7 +79,14 @@
         </style></head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -127,6 +137,32 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -1263,6 +1299,184 @@
 
 <p>The JV file contains a table with the <a href="../../measurement/jv-scan/#parameters">JV parameters</a>. Followed by the JV scan itself.</p>
 <h3 id="example-data">Example data<a class="headerlink" href="#example-data" title="Permanent link">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Updated header structure</p>
+<p>As of <a href="../../changelog/#v236-2026-01-13">v2.3.6</a>, the file headers are updated to include all available settings. The legacy version is still available by setting <code>FileHeaderVersion = 1</code> in the configuration file.</p>
+</div>
+<p><strong>Notes</strong><br>
+<code>[General Info]:Temperature</code> is included only if a temperature sensor is configured.<br>
+<code>[Environment Settings]</code> shows the fixed <code>Irradiance (mW/cm²)</code> value instead if no environment is selected.<br>
+<code>[Day-Night Settings]</code> is only included if it is configured.<br>
+<code>[Environment]</code> shows the value of the associated sensors during the JV. It is only included if an environment is selected</p>
+<p>Below you can find several example header structures based on which settings are configured. The <code>v1 (legacy)</code> header is static and doesn't change based on the settings.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="basic" name="__tabbed_1" type="radio"><input id="with-environment" name="__tabbed_1" type="radio"><input id="with-day-night" name="__tabbed_1" type="radio"><input id="v1-legacy" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="basic">Basic</label><label for="with-environment">With Environment</label><label for="with-day-night">With Day-Night</label><label for="v1-legacy">v1 (legacy)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>## Header ##
+[General info]
+User    Cicci Research
+Device  Sample
+Cell area (cm2) 1
+Test    Stability (JV)
+Date    2026-02-24
+Time    11:49:25
+Note    SMU 1A
+
+[Channel Settings]
+Voltage Range   10 V
+Current Range   18 mA (L)
+
+[Cell Settings]
+Inverted    No
+Type    Cell
+Cell Area (cm2) 1
+#Cells  1
+
+[JV Settings]
+Vmin (V)    -0.1
+Vmax (V)    0.7
+Voltage Step (mV)   40
+Scan Rate (mV/s)    200
+Scan Direction  FW then RV
+Auto-detect Voc Yes
+Overvoltage (%) 0
+
+[Environment Settings]
+Irradiance (mW/cm²) 100
+
+## Data ##
+Scan    Voc Jsc V_MPP   J_MPP   P_MPP   Rs  R// FF  Eff
+    V   mA/cm²  V   mA/cm²  mW/cm²  Ohm Ohm %   %
+FW  -1.230104   -3.021945   -0.655025   -1.666126   1.091354    2.94E+2 5.65E+2 29.36   11.73
+RV  0.761543    1.087563    0.374948    0.521392    0.195495    7.84E+2 6.26E+2 23.60   2.10
+
+V_FW (V)    J_FW (mA/cm²)   V_RV (V)    J_RV (mA/cm²)                       
+-3.187902E+0    7.089213E+0 6.761269E+0 -1.309565E+1                        
+-6.326601E+0    1.234149E+1 8.817806E+0 -1.625949E+1                        
+-8.570556E+0    1.588318E+1 9.645930E+0 -1.715583E+1                        
+...
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>## Header ##
+[General info]
+User    Cicci Research
+Device  Sample
+Cell area (cm2) 1
+Test    Stability (JV)
+Date    2026-02-24
+Time    11:49:25
+Temperature 355.01
+Note    SMU 1A
+
+[Channel Settings]
+Voltage Range   10 V
+Current Range   18 mA (L)
+
+[Cell Settings]
+Inverted    No
+Type    Cell
+Cell Area (cm2) 1
+#Cells  1
+
+[JV Settings]
+Vmin (V)    -0.1
+Vmax (V)    0.7
+Voltage Step (mV)   40
+Scan Rate (mV/s)    200
+Scan Direction  FW then RV
+Auto-detect Voc Yes
+Overvoltage (%) 0
+
+[Environment Settings]
+Name    test
+Humidity    Square4x6:Humidity
+Temperature Square4x6:Temperature
+Luminosity  :lum
+
+[Environment]
+Irradiance (mW/cm²) 9.30
+Temperature (°C)    355.01
+Humidity (%)    225.08
+
+## Data ##
+Scan    Voc Jsc V_MPP   J_MPP   P_MPP   Rs  R// FF  Eff
+    V   mA/cm²  V   mA/cm²  mW/cm²  Ohm Ohm %   %
+FW  -1.230104   -3.021945   -0.655025   -1.666126   1.091354    2.94E+2 5.65E+2 29.36   11.73
+RV  0.761543    1.087563    0.374948    0.521392    0.195495    7.84E+2 6.26E+2 23.60   2.10
+
+V_FW (V)    J_FW (mA/cm²)   V_RV (V)    J_RV (mA/cm²)                       
+-3.187902E+0    7.089213E+0 6.761269E+0 -1.309565E+1                        
+-6.326601E+0    1.234149E+1 8.817806E+0 -1.625949E+1                        
+-8.570556E+0    1.588318E+1 9.645930E+0 -1.715583E+1                        
+...
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>## Header ##
+[General info]
+User    Cicci Research
+Device  Sample
+Cell area (cm2) 1
+Test    Stability (JV)
+Date    2026-02-24
+Time    11:49:25
+Temperature 355.01
+Note    SMU 1A
+
+[Channel Settings]
+Voltage Range   10 V
+Current Range   18 mA (L)
+
+[Cell Settings]
+Inverted    No
+Type    Cell
+Cell Area (cm2) 1
+#Cells  1
+
+[JV Settings]
+Vmin (V)    -0.1
+Vmax (V)    0.7
+Voltage Step (mV)   40
+Scan Rate (mV/s)    200
+Scan Direction  FW then RV
+Auto-detect Voc Yes
+Overvoltage (%) 0
+
+[Environment Settings]
+Name    test
+Humidity    Square4x6:Humidity
+Temperature Square4x6:Temperature
+Luminosity  :lum
+
+[Day-Night Settings]
+Sensor  lum
+Unit    mW/cm²
+Threshold Value 5
+Threshold Duration  0
+Night Algorithm Fixed Voltage (no track)
+Night JV    Disable
+Constant Output 0.2
+
+[Environment]
+Irradiance (mW/cm²) 9.30
+Temperature (°C)    355.01
+Humidity (%)    225.08
+
+## Data ##
+Scan    Voc Jsc V_MPP   J_MPP   P_MPP   Rs  R// FF  Eff
+    V   mA/cm²  V   mA/cm²  mW/cm²  Ohm Ohm %   %
+FW  -1.230104   -3.021945   -0.655025   -1.666126   1.091354    2.94E+2 5.65E+2 29.36   11.73
+RV  0.761543    1.087563    0.374948    0.521392    0.195495    7.84E+2 6.26E+2 23.60   2.10
+
+V_FW (V)    J_FW (mA/cm²)   V_RV (V)    J_RV (mA/cm²)                       
+-3.187902E+0    7.089213E+0 6.761269E+0 -1.309565E+1                        
+-6.326601E+0    1.234149E+1 8.817806E+0 -1.625949E+1                        
+-8.570556E+0    1.588318E+1 9.645930E+0 -1.715583E+1                        
+...
+</code></pre></div>
+</div>
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>## Header ##
 [General info]
 User    Cicci Research
@@ -1311,6 +1525,9 @@ V_FW (V)    J_FW (mA/cm²)   V_RV (V)    J_RV (mA/cm²)
 6.97690E-2  1.05831E+0  3.49364E-1  9.62141E-1                      
 ...
 </code></pre></div>
+</div>
+</div>
+</div>
 
 
 

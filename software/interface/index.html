@@ -26,6 +26,9 @@
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
       
 
   
@@ -76,7 +79,14 @@
         </style></head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -127,6 +137,32 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -1378,7 +1414,7 @@
 <h1 id="software-interface-overview">Software Interface Overview<a class="headerlink" href="#software-interface-overview" title="Permanent link">¶</a></h1>
 <p>The ARKEO main window provides an overview of all channels, their measurement status, and the real-time graphs associated with active devices. This page introduces the layout of the interface and explains the purpose of its main elements. Understanding the interface helps users follow ongoing measurements and diagnose unexpected behavior during JV scans or tracking.</p>
 <p>The images below show the primary sections of the software interface.</p>
-<p><img alt="main-software1" src="../../assets/img/main-software1.png">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/img/main-software1.png" data-desc-position="bottom"><img alt="main-software1" class="on-glb" src="../../assets/img/main-software1.png"></a>
 <img alt="main-software2" src="../../assets/img/main-software2.png">
 <img alt="main-software3" src="../../assets/img/main-software3.png"></p>
 <hr>
@@ -1387,28 +1423,28 @@
 Select an item below to navigate to the corresponding documentation page.</p>
 <ul>
 <li>
-<p><img src="assets/img/toolbar-icons/settings_24dp_515151.svg" width="24" style="vertical-align: middle;"> <strong>Settings</strong> – Configure channels. <a href="../settings/">Go to settings →</a></p>
+<p><img src="../assets/img/toolbar-icons/settings_24dp_515151.svg" width="24" style="vertical-align: middle;"> <strong>Settings</strong> – Configure channels. <a href="../settings/">Go to settings →</a></p>
 </li>
 <li>
-<p><img src="assets/img/toolbar-icons/holder_24dp_515151.svg" width="24" style="vertical-align: middle;"> <strong>Holder</strong> – Manage sample-holder layouts and device positioning. <a href="../sample-holder-tool/">Go to sample holder tool →</a></p>
+<p><img src="../assets/img/toolbar-icons/holder_24dp_515151.svg" width="24" style="vertical-align: middle;"> <strong>Holder</strong> – Manage sample-holder layouts and device positioning. <a href="../sample-holder-tool/">Go to sample holder tool →</a></p>
 </li>
 <li>
-<p><img src="assets/img/toolbar-icons/results_24dp_515151.svg" width="24" style="vertical-align: middle;"> <strong>Results</strong> – View and interpret measurement results and exported data. <a href="../data/">Go to results →</a></p>
+<p><img src="../assets/img/toolbar-icons/results_24dp_515151.svg" width="24" style="vertical-align: middle;"> <strong>Results</strong> – View and interpret measurement results and exported data. <a href="../data/">Go to results →</a></p>
 </li>
 <li>
-<p><img src="assets/img/toolbar-icons/sensors_24dp_515151.svg" width="24" style="vertical-align: middle;"> <strong>Sensors</strong> – Overview of environmental sensors and how they integrate with measurements. <a href="../sensors/sensor/">Go to sensors →</a></p>
+<p><img src="../assets/img/toolbar-icons/sensors_24dp_515151.svg" width="24" style="vertical-align: middle;"> <strong>Sensors</strong> – Overview of environmental sensors and how they integrate with measurements. <a href="../sensors/sensor/">Go to sensors →</a></p>
 </li>
 <li>
-<p><img src="assets/img/toolbar-icons/mode_24dp_515151.svg" width="24" style="vertical-align: middle;"> <strong>Mode</strong> – <em>Select measurement or operation mode.</em>  </p>
+<p><img src="../assets/img/toolbar-icons/mode_24dp_515151.svg" width="24" style="vertical-align: middle;"> <strong>Mode</strong> – <em>Select measurement or operation mode.</em>  </p>
 </li>
 <li>
-<p><img src="assets/img/toolbar-icons/log_24dp_515151.svg" width="24" style="vertical-align: middle;"> <strong>Log</strong> – <em>View system or measurement logs.</em>  </p>
+<p><img src="../assets/img/toolbar-icons/log_24dp_515151.svg" width="24" style="vertical-align: middle;"> <strong>Log</strong> – <em>View system or measurement logs.</em>  </p>
 </li>
 <li>
-<p><img src="assets/img/toolbar-icons/help_24dp_515151.svg" width="24" style="vertical-align: middle;"> <strong>Help</strong> – <em>User help or documentation overview (this website)</em>  </p>
+<p><img src="../assets/img/toolbar-icons/help_24dp_515151.svg" width="24" style="vertical-align: middle;"> <strong>Help</strong> – <em>User help or documentation overview (this website)</em>  </p>
 </li>
 <li>
-<p><img src="assets/img/toolbar-icons/api_24dp_515151.svg" width="24" style="vertical-align: middle;"> <strong>API</strong> – Documentation for integrating ARKEO programmatically<br>
+<p><img src="../assets/img/toolbar-icons/api_24dp_515151.svg" width="24" style="vertical-align: middle;"> <strong>API</strong> – Documentation for integrating ARKEO programmatically<br>
 <a href="https://cicciresearch.github.io/arkeo-multichannel-api-docs/">Open API documentation →</a></p>
 </li>
 </ul>

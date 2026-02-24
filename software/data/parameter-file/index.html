@@ -26,6 +26,9 @@
     
       <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
       
 
   
@@ -76,7 +79,14 @@
         </style></head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -127,6 +137,32 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -1284,34 +1320,54 @@
 <li>Efficiency (%) RV</li>
 </ul>
 <h3 id="example-data">Example data<a class="headerlink" href="#example-data" title="Permanent link">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Updated header structure</p>
+<p>This page shows the latest header structure as of software version <a href="../../changelog/#v236-2026-01-13">v2.3.6</a>. Please refer to the <a href="../jv-file/">JV File</a> page for more information</p>
+</div>
 <div class="highlight"><pre><span></span><code>## Header ##
 [General info]
 User    Cicci Research
-Device  Silicon
+Device  Sample
 Cell area (cm2) 1
-Test    Stability (Parameters)
-Date    2026-01-13
-Time    16:33:14
-Note    SMU 1D
+Test    Stability (JV)
+Date    2026-02-24
+Time    11:49:25
+Temperature 355.01
+Note    SMU 1A
 
-[JV Settings]
-Vmin (V)    -0.100
-Vmax (V)    0.700
-Voltage Step (mV)   20.000
-Scan Rate (mV/s)    100.000
-Auto-detect Voc Yes
-Scan direction  FW then RV
-Voltage Range (V)   10 V
-Current Range (V)   L
-Inverted    No
-Auto-range  On
+[Channel Settings]
+Voltage Range   10 V
+Current Range   18 mA (L)
 
 [Cell Settings]
-Tipology    Cell
-Cell Area (cm2) 1.00
-#Cells  1.00
-W cell area (cm2)   1.00
-#W cells    1.00
+Inverted    No
+Type    Cell
+Cell Area (cm2) 1
+#Cells  1
+
+[JV Settings]
+Vmin (V)    -0.1
+Vmax (V)    0.7
+Voltage Step (mV)   40
+Scan Rate (mV/s)    200
+Scan Direction  FW then RV
+Auto-detect Voc Yes
+Overvoltage (%) 0
+
+[Environment Settings]
+Name    test
+Humidity    Square4x6:Humidity
+Temperature Square4x6:Temperature
+Luminosity  :lum
+
+[Day-Night Settings]
+Sensor  lum
+Unit    mW/cm²
+Threshold Value 5
+Threshold Duration  0
+Night Algorithm Fixed Voltage (no track)
+Night JV    Disable
+Constant Output 0.2
 
 ## Data ##
 Time (Hours)    Voc (V) FW  Jsc (mA/cm2) FW V_MPP (V) FW    J_MPP (mA/cm2) FW   P_MPP (mW/cm2) FW   Rs (Ohm) FW R// (Ohm) FW    Fill Factor (%) FW  Efficiency (%) FW   Voc (V) RV  Jsc (mA/cm2) RV V_MPP (V) RV    J_MPP (mA/cm2) RV   P_MPP (mW/cm2) RV   Rs (Ohm) RV R// (Ohm) RV    Fill Factor (%) RV  Efficiency (%) RV
