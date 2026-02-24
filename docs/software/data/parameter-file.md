@@ -22,35 +22,54 @@ The parameter file saves all [JV parameters](../measurement/jv-scan.md/#paramete
 
 ### Example data ###
 
+!!! Warning "Updated header structure"
+    This page shows the latest header structure as of software version [v2.3.6](../changelog.md#v236-2026-01-13). Please refer to the [JV File](jv-file.md) page for more information
+
 ```
 ## Header ##
 [General info]
 User	Cicci Research
-Device	Silicon
+Device	Sample
 Cell area (cm2)	1
-Test	Stability (Parameters)
-Date	2026-01-13
-Time	16:33:14
-Note	SMU 1D
+Test	Stability (JV)
+Date	2026-02-24
+Time	11:49:25
+Temperature	355.01
+Note	SMU 1A
 
-[JV Settings]
-Vmin (V)	-0.100
-Vmax (V)	0.700
-Voltage Step (mV)	20.000
-Scan Rate (mV/s)	100.000
-Auto-detect Voc	Yes
-Scan direction	FW then RV
-Voltage Range (V)	10 V
-Current Range (V)	L
-Inverted	No
-Auto-range	On
+[Channel Settings]
+Voltage Range	10 V
+Current Range	18 mA (L)
 
 [Cell Settings]
-Tipology	Cell
-Cell Area (cm2)	1.00
-#Cells	1.00
-W cell area (cm2)	1.00
-#W cells	1.00
+Inverted	No
+Type	Cell
+Cell Area (cm2)	1
+#Cells	1
+
+[JV Settings]
+Vmin (V)	-0.1
+Vmax (V)	0.7
+Voltage Step (mV)	40
+Scan Rate (mV/s)	200
+Scan Direction	FW then RV
+Auto-detect Voc	Yes
+Overvoltage (%)	0
+
+[Environment Settings]
+Name	test
+Humidity	Square4x6:Humidity
+Temperature	Square4x6:Temperature
+Luminosity	:lum
+
+[Day-Night Settings]
+Sensor	lum
+Unit	mW/cm²
+Threshold Value	5
+Threshold Duration	0
+Night Algorithm	Fixed Voltage (no track)
+Night JV	Disable
+Constant Output	0.2
 
 ## Data ##
 Time (Hours)	Voc (V) FW	Jsc (mA/cm2) FW	V_MPP (V) FW	J_MPP (mA/cm2) FW	P_MPP (mW/cm2) FW	Rs (Ohm) FW	R// (Ohm) FW	Fill Factor (%) FW	Efficiency (%) FW	Voc (V) RV	Jsc (mA/cm2) RV	V_MPP (V) RV	J_MPP (mA/cm2) RV	P_MPP (mW/cm2) RV	Rs (Ohm) RV	R// (Ohm) RV	Fill Factor (%) RV	Efficiency (%) RV

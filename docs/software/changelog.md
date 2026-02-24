@@ -80,6 +80,7 @@
 
 #### v2.3.5 - 2026-01-13
 
+- Updated API to v0.5.0
 - Added day-night cycling per channel
 	- Previous version still available by setting the "User Global" option
 	- The settings window has been slightly rearranged to accommodate the new feature
@@ -89,3 +90,10 @@
 - Added Temperature stage control in the sensor manager. They are considered as temperature sensors
 - Fixed Parameter file not taking into account the irradiance value in the settings
 - Fixed some settings not being copied when using the copy channels checkbox
+
+#### v2.3.6 - 2026-01-13
+- Fixed several Day-Night cycling bugs
+- Fixed constant output not showing up in day-night cycle
+- Changed file headers to now contain all settings (see [JV File](../software/data/jv-file.md)).
+	- Most notable, the environment and day-night cycling settings are now included (if enabled)
+	- legacy version is still available by setting `FileHeaderVersion = 1` in the config file

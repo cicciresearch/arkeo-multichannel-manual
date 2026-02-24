@@ -1,5 +1,7 @@
 import os
 
+# This function generates the tabs containing sample holder PCBs. 
+# It is called by /hardware/sample-holder/sampleholder.md
 def define_env(env):
 
     @env.macro

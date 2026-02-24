@@ -13,12 +13,12 @@ For a standard stability test, several files for each device will be generated a
 
 ### File structure
 
-To make data processing easier, all files have the same general structure, independent of the measurement type. Each file starts with a header section containing all measurement settings indicated by the `## Header ##` tag. Settings are further subdivided in categories indicated by the labels in square brackets. 
+To make data processing easier, all files have the same general structure, independent of the measurement type. Each file starts with a header section, indicated by the `## Header ##` tag, containing all measurement settings. Settings are further subdivided in categories by labels in square brackets. 
 
 !!! note
 	As the software evolves, settings may be added, modified or deleted. When this happens ensure that any post-processing script can handle this.
 
-The `## Data ##` tag indicates where the actual measurement result begins. Data are always stored in a tab-delimited 2D array of values, always containing a header row. In the case of the JV file, a table with the JV parameters and a table with each raw data point of the JV scan is also stored.
+The `## Data ##` tag indicates where the actual measurement result begins. Data is always stored in a tab-delimited 2D array of values, always containing a row with column headers. In the case of the JV file, a table with the JV parameters and a table with each raw data point of the JV scan is also stored.
 
 ```
 ## Header ##
