@@ -95,7 +95,7 @@
 - Fixed several Day-Night cycling bugs
 - Fixed constant output not showing up in day-night cycle
 
-### v2.4.0 - 2026-03-09
+#### v2.4.0 - 2026-03-09
 - Changed file headers to now contain all settings (see [JV File](../software/data/jv-file.md)).
 	- Most notable, the environment and day-night cycling settings are now included (if enabled)
 	- legacy version is still available by setting `FileHeaderVersion = 1` in the config file

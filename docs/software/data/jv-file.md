@@ -2,13 +2,13 @@ The JV file contains a table with the [JV parameters](../measurement/jv-scan.md/
 
 ### Example data ###
 !!! Warning "Updated header structure"
-	As of [v2.3.6](../changelog.md#v236-2026-01-13), the file headers are updated to include all available settings. The legacy version is still available by setting `FileHeaderVersion = 1` in the configuration file.
+	As of [v2.4.0](../changelog.md#v240-2026-03-09), the file headers are updated to include all available settings. The legacy version is still available by setting `FileHeaderVersion = 1` in the configuration file.
 
 **Notes**  
 `[General Info]:Temperature` is included only if a temperature sensor is configured.  
 `[Environment Settings]` shows the fixed `Irradiance (mW/cm²)` value instead if no environment is selected.  
 `[Day-Night Settings]` is only included if it is configured.  
-`[Environment]` shows the value of the associated sensors during the JV. It is only included if an environment is selected
+`[Environment]` shows the value of the associated sensors during the JV. It is only included if an environment is selected.
 
 Below you can find several example header structures based on which settings are configured. The `v1 (legacy)` header is static and doesn't change based on the settings.
 
@@ -94,10 +94,10 @@ Below you can find several example header structures based on which settings are
 	Overvoltage (%)	0
 
 	[Environment Settings]
-	Name	test
+	Name	Light Soaker
 	Humidity	Square4x6:Humidity
 	Temperature	Square4x6:Temperature
-	Luminosity	:lum
+	Luminosity	Pyranometer:lum
 
 	[Environment]
 	Irradiance (mW/cm²)	9.30
@@ -151,10 +151,10 @@ Below you can find several example header structures based on which settings are
 	Overvoltage (%)	0
 
 	[Environment Settings]
-	Name	test
+	Name	Light Soaker
 	Humidity	Square4x6:Humidity
 	Temperature	Square4x6:Temperature
-	Luminosity	:lum
+	Luminosity	Pyranometer:lum
 
 	[Day-Night Settings]
 	Sensor	lum

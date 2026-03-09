@@ -23,7 +23,7 @@ The parameter file saves all [JV parameters](../measurement/jv-scan.md/#paramete
 ### Example data ###
 
 !!! Warning "Updated header structure"
-    This page shows the latest header structure as of software version [v2.3.6](../changelog.md#v236-2026-01-13). Please refer to the [JV File](jv-file.md) page for more information
+    This page shows the latest header structure as of software version [v2.4.0](../changelog.md#v240-2026-03-09). Please refer to the [JV File](jv-file.md) page for more information
 
 ```
 ## Header ##
@@ -57,10 +57,10 @@ Auto-detect Voc	Yes
 Overvoltage (%)	0
 
 [Environment Settings]
-Name	test
+Name	Light Soaker
 Humidity	Square4x6:Humidity
 Temperature	Square4x6:Temperature
-Luminosity	:lum
+Luminosity	Pyranometer:lum
 
 [Day-Night Settings]
 Sensor	lum
