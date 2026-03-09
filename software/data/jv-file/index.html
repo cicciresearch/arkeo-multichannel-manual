@@ -20,7 +20,7 @@
     
     
       
-        <title>JV File - Arkeo Multichannel Manual (v2.3.5)</title>
+        <title>JV File - Arkeo Multichannel Manual (v2.4.0)</title>
       
     
     
@@ -109,7 +109,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Arkeo Multichannel Manual (v2.3.5)" class="md-header__button md-logo" aria-label="Arkeo Multichannel Manual (v2.3.5)" data-md-component="logo">
+    <a href="../../.." title="Arkeo Multichannel Manual (v2.4.0)" class="md-header__button md-logo" aria-label="Arkeo Multichannel Manual (v2.4.0)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -123,7 +123,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Arkeo Multichannel Manual (v2.3.5)
+            Arkeo Multichannel Manual (v2.4.0)
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -235,13 +235,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Arkeo Multichannel Manual (v2.3.5)" class="md-nav__button md-logo" aria-label="Arkeo Multichannel Manual (v2.3.5)" data-md-component="logo">
+    <a href="../../.." title="Arkeo Multichannel Manual (v2.4.0)" class="md-nav__button md-logo" aria-label="Arkeo Multichannel Manual (v2.4.0)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
-    Arkeo Multichannel Manual (v2.3.5)
+    Arkeo Multichannel Manual (v2.4.0)
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1299,13 +1299,13 @@
 <h3 id="example-data">Example data<a class="headerlink" href="#example-data" title="Permanent link">¶</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Updated header structure</p>
-<p>As of <a href="../../changelog/#v236-2026-01-13">v2.3.6</a>, the file headers are updated to include all available settings. The legacy version is still available by setting <code>FileHeaderVersion = 1</code> in the configuration file.</p>
+<p>As of <a href="../../changelog/#v240-2026-03-09">v2.4.0</a>, the file headers are updated to include all available settings. The legacy version is still available by setting <code>FileHeaderVersion = 1</code> in the configuration file.</p>
 </div>
 <p><strong>Notes</strong><br>
 <code>[General Info]:Temperature</code> is included only if a temperature sensor is configured.<br>
 <code>[Environment Settings]</code> shows the fixed <code>Irradiance (mW/cm²)</code> value instead if no environment is selected.<br>
 <code>[Day-Night Settings]</code> is only included if it is configured.<br>
-<code>[Environment]</code> shows the value of the associated sensors during the JV. It is only included if an environment is selected</p>
+<code>[Environment]</code> shows the value of the associated sensors during the JV. It is only included if an environment is selected.</p>
 <p>Below you can find several example header structures based on which settings are configured. The <code>v1 (legacy)</code> header is static and doesn't change based on the settings.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="basic" name="__tabbed_1" type="radio"><input id="with-environment" name="__tabbed_1" type="radio"><input id="with-day-night" name="__tabbed_1" type="radio"><input id="v1-legacy" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="basic">Basic</label><label for="with-environment">With Environment</label><label for="with-day-night">With Day-Night</label><label for="v1-legacy">v1 (legacy)</label></div>
 <div class="tabbed-content">
@@ -1387,10 +1387,10 @@ Auto-detect Voc Yes
 Overvoltage (%) 0
 
 [Environment Settings]
-Name    test
+Name    Light Soaker
 Humidity    Square4x6:Humidity
 Temperature Square4x6:Temperature
-Luminosity  :lum
+Luminosity  Pyranometer:lum
 
 [Environment]
 Irradiance (mW/cm²) 9.30
@@ -1442,10 +1442,10 @@ Auto-detect Voc Yes
 Overvoltage (%) 0
 
 [Environment Settings]
-Name    test
+Name    Light Soaker
 Humidity    Square4x6:Humidity
 Temperature Square4x6:Temperature
-Luminosity  :lum
+Luminosity  Pyranometer:lum
 
 [Day-Night Settings]
 Sensor  lum
