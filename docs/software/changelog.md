@@ -1,3 +1,6 @@
+#### v1.0
+Initial version
+
 #### v2.0
 
 - Overhauled the graph interface to be more dynamic
@@ -98,5 +101,6 @@
 #### v2.4.0 - 2026-03-09
 - Changed file headers to now contain all settings (see [JV File](../software/data/jv-file.md)).
 	- Most notable, the environment and day-night cycling settings are now included (if enabled)
-	- legacy version is still available by setting `FileHeaderVersion = 1` in the config file
+	- Legacy version is still available by setting `FileHeaderVersion = 1` in the config file
 - Added generic temperature and humidity sensors. Any sensor with a gain and offset can be used now.
+- Added [sensor data files](../software/sensors/data-file.md). Sensor data is saved here, independently of any configured devices

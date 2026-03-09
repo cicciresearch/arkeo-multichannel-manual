@@ -46,7 +46,7 @@ In addition, if an environment is configured (see [environments](../sensors/envi
     Start-up Time	11:49:20 24/02/2026
 
     [Environment Settings]
-    Name	test
+    Name	Light Soaker
     Humidity	Square4x6:Humidity
     Temperature	Square4x6:Temperature
     Luminosity	Pyranometer:lum

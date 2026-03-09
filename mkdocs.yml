@@ -85,6 +85,7 @@ nav:
       - Tracking File: software/data/tracking-file.md
     - Environment:
       - Sensors: software/sensors/sensor.md
+      - Data File: software/sensors/data-file.md
       - Environment: software/sensors/environments.md
     - Day-Night Cycling: software/day-night.md
   - Changelog: software/changelog.md
