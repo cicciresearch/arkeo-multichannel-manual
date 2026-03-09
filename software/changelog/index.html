@@ -56,8 +56,6 @@
     
       <link rel="stylesheet" href="../../assets/css/extra.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1365,6 +1363,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#v240-2026-03-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v2.4.0 - 2026-03-09
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1540,6 +1549,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#v240-2026-03-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v2.4.0 - 2026-03-09
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1666,11 +1686,15 @@
 <ul>
 <li>Fixed several Day-Night cycling bugs</li>
 <li>Fixed constant output not showing up in day-night cycle</li>
+</ul>
+<h3 id="v240-2026-03-09">v2.4.0 - 2026-03-09<a class="headerlink" href="#v240-2026-03-09" title="Permanent link">¶</a></h3>
+<ul>
 <li>Changed file headers to now contain all settings (see <a href="../data/jv-file/">JV File</a>).<ul>
 <li>Most notable, the environment and day-night cycling settings are now included (if enabled)</li>
 <li>legacy version is still available by setting <code>FileHeaderVersion = 1</code> in the config file</li>
 </ul>
 </li>
+<li>Added generic temperature and humidity sensors. Any sensor with a gain and offset can be used now.</li>
 </ul>
 
 
