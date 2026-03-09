@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#v20" class="md-skip">
+        <a href="#v10" class="md-skip">
           Skip to content
         </a>
       
@@ -1094,6 +1094,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../sensors/data-file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data File
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../sensors/environments/" class="md-nav__link">
         
   
@@ -1219,6 +1247,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.0
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#v20" class="md-nav__link">
@@ -1407,6 +1446,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#v10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v20" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1579,6 +1629,8 @@
 
   <h1>Changelog</h1>
 
+<h4 id="v10">v1.0<a class="headerlink" href="#v10" title="Permanent link">¶</a></h4>
+<p>Initial version</p>
 <h4 id="v20">v2.0<a class="headerlink" href="#v20" title="Permanent link">¶</a></h4>
 <ul>
 <li>Overhauled the graph interface to be more dynamic</li>
@@ -1691,10 +1743,11 @@
 <ul>
 <li>Changed file headers to now contain all settings (see <a href="../data/jv-file/">JV File</a>).<ul>
 <li>Most notable, the environment and day-night cycling settings are now included (if enabled)</li>
-<li>legacy version is still available by setting <code>FileHeaderVersion = 1</code> in the config file</li>
+<li>Legacy version is still available by setting <code>FileHeaderVersion = 1</code> in the config file</li>
 </ul>
 </li>
 <li>Added generic temperature and humidity sensors. Any sensor with a gain and offset can be used now.</li>
+<li>Added <a href="../sensors/data-file/">sensor data files</a>. Sensor data is saved here, independently of any configured devices</li>
 </ul>
 
 
