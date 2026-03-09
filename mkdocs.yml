@@ -104,4 +104,3 @@ extra_css:
   - assets/css/compact-lists.css
   - assets/css/compact-tables.css
   - assets/css/extra.css
-  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css

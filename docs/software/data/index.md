@@ -1,4 +1,4 @@
-When working with many devices as the same time, data management becomes a challenge. Moreover, the system is used by many different people, all with different needs. The basic data storing method is to save all raw data of each separate device into its own folder. The standard folder hierarchy is as follows:
+Each measurement routine generates one or more text files that are automatically saved according to the following directory structure:
 ```
 […]\<username>\<start date>\<device name>_<channel>\<start time>\
 ``` 
