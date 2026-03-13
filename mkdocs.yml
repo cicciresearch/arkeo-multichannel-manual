@@ -105,3 +105,6 @@ extra_css:
   - assets/css/compact-lists.css
   - assets/css/compact-tables.css
   - assets/css/extra.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
+
+site_url: https://docs.cicciresearch.it/arkeo-multichannel-manual/

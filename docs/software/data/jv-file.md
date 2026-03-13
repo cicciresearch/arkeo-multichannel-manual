@@ -40,7 +40,7 @@ Below you can find several example header structures based on which settings are
 	Vmax (V)	0.7
 	Voltage Step (mV)	40
 	Scan Rate (mV/s)	200
-	Scan Direction	FW then RV
+	Scan Order	FW then RV
 	Auto-detect Voc	Yes
 	Overvoltage (%)	0
 
@@ -89,7 +89,7 @@ Below you can find several example header structures based on which settings are
 	Vmax (V)	0.7
 	Voltage Step (mV)	40
 	Scan Rate (mV/s)	200
-	Scan Direction	FW then RV
+	Scan Order	FW then RV
 	Auto-detect Voc	Yes
 	Overvoltage (%)	0
 
@@ -146,7 +146,7 @@ Below you can find several example header structures based on which settings are
 	Vmax (V)	0.7
 	Voltage Step (mV)	40
 	Scan Rate (mV/s)	200
-	Scan Direction	FW then RV
+	Scan Order	FW then RV
 	Auto-detect Voc	Yes
 	Overvoltage (%)	0
 
