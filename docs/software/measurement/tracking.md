@@ -4,7 +4,7 @@ In the tracking phase of the measurement, the device is kept at a specific point
 
 The Perturb and Observe (PAO) algorithm is the most widely used algorithm for this task due its simplicity and robustness. Starting from an initial V_MPP obtained from the JV, the device is slightly positively and negatively perturbed (ΔV) with respect to V_MPP. This results in 3 points: V_MPP-ΔV, V_MPP, V_MPP+ΔV. For each point, the device power recorded, and the voltage associated with the maximum power is set as the new V_MPP. The algorithm is then repeated.
 
-???+ warning "Current spikes"
+??? warning "Current spikes"
     Jumps in voltage, especially when far from the MPP where the current changes more with changes in voltages, can cause problems in the measurement due to the capacitive effects of many photovoltaic devices. A JV scan stops either at Jsc (when measuring in reverse direction) or at Voc (when measuring in forward direction). A jump in voltage from this point to MPP causes a large current spike as the capacitive effect wears off. To avoid this issue, the Arkeo Multichannel, slowly moves from the last JV point of the scan to the MPP. With a speed (in V/s) according to the JV scan speed. 
     
     Similarly, when oscillating the voltage during the PAO tracking the voltage is moving in a triangle pattern instead of a sawtooth pattern.

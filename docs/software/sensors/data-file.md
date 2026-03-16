@@ -6,7 +6,7 @@ Sensor values are written periodically at a configurable interval (typically **1
 
 ### File Organization
 
-Environmental data is stored in the `C:\Arkeo\Sensors\` folder using a hierarchical structure that separates different sensors. Files are organized by year and month to avoid excessively large directories.
+Environmental data is stored in the `D:\Arkeo\SensorLog\` folder using a hierarchical structure that separates different sensors. Files are organized by year and month to avoid excessively large directories and files.
 
 ```text
 Sensors/
@@ -23,7 +23,7 @@ Each file contains all measurements recorded during a single day. If the applica
 
 ### File Format
 
-Sensor data is stored as a tab-separated values table. The first rows contain some metadata about the sensor.
+Sensor data is stored as a tab-separated values table. The first rows contain some metadata about the sensor. The save interval can be changed in the configuration file by changing `Sensor.LogInterval` value. The unit is seconds.
 
 Example:
 
