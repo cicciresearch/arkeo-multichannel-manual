@@ -1,4 +1,4 @@
-site_name: Arkeo Multichannel Manual (v2.4.0)
+site_name: Arkeo Multichannel Manual (v2.5.0)
 
 theme:
   name: material
@@ -48,6 +48,8 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - footnotes
+  - abbr
+  - pymdownx.snippets
   - pymdownx.tabbed:
       alternate_style: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify

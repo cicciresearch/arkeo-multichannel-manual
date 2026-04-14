@@ -99,8 +99,18 @@ Initial version
 - Fixed constant output not showing up in day-night cycle
 
 #### v2.4.0 - 2026-03-09
-- Changed file headers to now contain all settings (see [JV File](../software/data/jv-file.md)).
+- Changed file headers to now contain all settings (see [JV File](../software/data/jv-file.md) for more details).
 	- Most notable, the environment and day-night cycling settings are now included (if enabled)
 	- Legacy version is still available by setting `FileHeaderVersion = 1` in the config file
-- Added generic temperature and humidity sensors. Any sensor with a gain and offset can be used now.
+- Added generic sensors option when adding a custom sensor. Any sensor with a gain and offset can be used now
 - Added [sensor data files](../software/sensors/data-file.md). Sensor data is saved here, independently of any configured devices
+
+#### v2.5.0 - 2026-04-14
+- Added JV preview on parameter point hover in the tracking and curve parameters view
+- Added a JV history view, showing JV curves overlapped
+- Fixed tracking in `Fixed Voltage` mode not moving beyond JV scan range limits
+- Improved MPPT speed
+- Removed the `Perturbation` setting
+	- `MPPT` now automatically uses 5% of the JV scan range
+	- Other modes now use a proportional algorithm instead of a perturb and observe algorithm to apply the setpoint ([details](measurement/tracking.md#fixed-setpoint))
+- Removed `Fixed Voltage (no track)`
