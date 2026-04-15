@@ -16,3 +16,5 @@ When operating at a fixed voltage, it is important to consider that the SMU regu
 At regular intervals, the system performs an additional JV scan. These periodic scans serve two purposes. First, they provide updated JV parameters—such as efficiency, fill factor, Voc, and Jsc—allowing users to follow the evolution of device performance over time. This offers better insight into degradation behavior than monitoring MPP alone. Second, periodic scans confirm that the MPP being tracked remains the true global maximum and has not shifted due to device changes during the measurement period.
 
 The combination of JV initialization, continuous tracking, and periodic full scans enables ARKEO to characterize device performance accurately while maintaining stable long-term operation.
+
+--8<-- "includes/abbreviations.md"

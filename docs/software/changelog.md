@@ -114,3 +114,6 @@ Initial version
 	- `MPPT` now automatically uses 5% of the JV scan range
 	- Other modes now use a proportional algorithm instead of a perturb and observe algorithm to apply the setpoint ([details](measurement/tracking.md#fixed-setpoint))
 - Removed `Fixed Voltage (no track)`
+
+#### v2.5.1 - 2026-
+- Added live power indicator under the graphs

@@ -11,14 +11,20 @@ For a standard stability test, several files for each device will be generated a
 2. [Parameter](parameter-file.md)
 3. [Tracking](tracking-file.md)
 
-### File structure
+## File structure
+To make data processing easier, all files have the same general structure, independent of the measurement type. 
 
-To make data processing easier, all files have the same general structure, independent of the measurement type. Each file starts with a header section, indicated by the `## Header ##` tag, containing all measurement settings. Settings are further subdivided in categories by labels in square brackets. 
+### `## Header ##`
+Each file starts with a header section, indicated by the `## Header ##` tag, containing all measurement settings. Settings are further subdivided in categories by labels in square brackets. 
 
-!!! note
+!!! info "File structure"
 	As the software evolves, settings may be added, modified or deleted. When this happens ensure that any post-processing script can handle this.
 
-The `## Data ##` tag indicates where the actual measurement result begins. Data is always stored in a tab-delimited 2D array of values, always containing a row with column headers. In the case of the JV file, a table with the JV parameters and a table with each raw data point of the JV scan is also stored.
+### `## Parameters ##`
+The [JV file](jv-file.md) contains a `## Parameters ##` section where the calculated JV parameters are stored
+
+### `## Data ##`
+The `## Data ##` tag indicates where the actual measurement result begins. Data is always stored in a tab-delimited 2D array of values, always containing a row with column headers
 
 ```
 ## Header ##

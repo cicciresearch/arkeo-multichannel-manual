@@ -1,16 +1,22 @@
 The JV file contains a table with the [JV parameters](../measurement/jv-scan.md/#parameters). Followed by the JV scan itself.
 
-### Example data ###
+### File structure
 !!! Warning "Updated header structure"
 	As of [v2.4.0](../changelog.md#v240-2026-03-09), the file headers are updated to include all available settings. The legacy version is still available by setting `FileHeaderVersion = 1` in the configuration file.
 
-**Notes**  
-`[General Info]:Temperature` is included only if a temperature sensor is configured.  
-`[Environment Settings]` shows the fixed `Irradiance (mW/cm²)` value instead if no environment is selected.  
-`[Day-Night Settings]` is only included if it is configured.  
-`[Environment]` shows the value of the associated sensors during the JV. It is only included if an environment is selected.
+Due to the large amount of different configuration for any measurement, the file structure is dynamic and will change based on the configuration:
+
+- `[General Info]:Temperature` is included only if a temperature sensor is configured.  
+- `[Environment Settings]` shows the fixed `Irradiance (mW/cm²)` value instead if no environment is selected.  
+- `[Day-Night Settings]` is only included if it is configured.  
+- `[Environment]` shows the value of the associated sensors during the JV. It is only included if an environment is selected.
+- If `Forward Only` or `Reverse Only` is selected as the scan order, the columns for the scan which is not performed are omitted.
+- Columns are always sorted `V_FW J_FW V_RV J_RV`. Even if `RV then FW` is selected as the scan order
+
+### Example data
 
 Below you can find several example header structures based on which settings are configured. The `v1 (legacy)` header is static and doesn't change based on the settings.
+
 
 === "Basic"
 
@@ -21,8 +27,8 @@ Below you can find several example header structures based on which settings are
 	Device	Sample
 	Cell area (cm2)	1
 	Test	Stability (JV)
-	Date	2026-02-24
-	Time	11:49:25
+	Date	2026-04-15
+	Time	12:03:16
 	Note	SMU 1A
 
 	[Channel Settings]
@@ -37,26 +43,46 @@ Below you can find several example header structures based on which settings are
 
 	[JV Settings]
 	Vmin (V)	-0.1
-	Vmax (V)	0.7
-	Voltage Step (mV)	40
-	Scan Rate (mV/s)	200
-	Scan Order	FW then RV
+	Vmax (V)	1.2
+	Voltage Step (mV)	20
+	Scan Rate (mV/s)	100
+	Scan Direction	FW then RV
 	Auto-detect Voc	Yes
-	Overvoltage (%)	0
+	Overvoltage (%)	10
 
 	[Environment Settings]
 	Irradiance (mW/cm²)	100
 
+	## Parameters ##
+	[Forward]
+	Voc (V)	0.42734
+	Jsc (A/cm²)	1.2063E-3
+	V_MPP (V)	0.31782
+	J_MPP (A/cm²)	9.08699E-4
+	P_MPP (W/cm²)	2.88804E-4
+	Rs (Ohm)	5.70E+1
+	R// (Ohm)	1.70E+3
+	FF (%)	56.024
+	Eff (%)	0.289
+
+	[Reverse]
+	Voc (V)	0.42772
+	Jsc (A/cm²)	1.2053E-3
+	V_MPP (V)	0.31959
+	J_MPP (A/cm²)	9.03369E-4
+	P_MPP (W/cm²)	2.88704E-4
+	Rs (Ohm)	5.68E+1
+	R// (Ohm)	1.66E+3
+	FF (%)	55.999
+	Eff (%)	0.289
+
 	## Data ##
-	Scan	Voc	Jsc	V_MPP	J_MPP	P_MPP	Rs	R//	FF	Eff
-		V	mA/cm²	V	mA/cm²	mW/cm²	Ohm	Ohm	%	%
-	FW	-1.230104	-3.021945	-0.655025	-1.666126	1.091354	2.94E+2	5.65E+2	29.36	11.73
-	RV	0.761543	1.087563	0.374948	0.521392	0.195495	7.84E+2	6.26E+2	23.60	2.10
-										
-	V_FW (V)	J_FW (mA/cm²)	V_RV (V)	J_RV (mA/cm²)						
-	-3.187902E+0	7.089213E+0	6.761269E+0	-1.309565E+1						
-	-6.326601E+0	1.234149E+1	8.817806E+0	-1.625949E+1						
-	-8.570556E+0	1.588318E+1	9.645930E+0	-1.715583E+1						
+	V_FW (V)	J_FW (A/cm²)	V_RV (V)	J_RV (A/cm²)
+	-7.79197E-2	1.25566E-3	4.76568E-1	-1.35698E-3
+	-5.72929E-2	1.24190E-3	4.58934E-1	-7.10248E-4
+	-3.83118E-2	1.22759E-3	4.38779E-1	-2.26132E-4
+	-1.70949E-2	1.21721E-3	4.19906E-1	1.39897E-4
+	2.08288E-3	1.20497E-3	3.99207E-1	3.99430E-4
 	...
 	```
 
@@ -71,7 +97,7 @@ Below you can find several example header structures based on which settings are
 	Test	Stability (JV)
 	Date	2026-02-24
 	Time	11:49:25
-	Temperature	355.01
+	Temperature	25.63
 	Note	SMU 1A
 
 	[Channel Settings]
@@ -100,20 +126,40 @@ Below you can find several example header structures based on which settings are
 	Luminosity	Pyranometer:lum
 
 	[Environment]
-	Irradiance (mW/cm²)	9.30
-	Temperature (°C)	355.01
-	Humidity (%)	225.08
+	Irradiance (mW/cm²)	98.13
+	Temperature (°C)	25.63
+	Humidity (%)	56.2
+
+	## Parameters ##
+	[Forward]
+	Voc (V)	0.42734
+	Jsc (A/cm²)	1.2063E-3
+	V_MPP (V)	0.31782
+	J_MPP (A/cm²)	9.08699E-4
+	P_MPP (W/cm²)	2.88804E-4
+	Rs (Ohm)	5.70E+1
+	R// (Ohm)	1.70E+3
+	FF (%)	56.024
+	Eff (%)	0.289
+
+	[Reverse]
+	Voc (V)	0.42772
+	Jsc (A/cm²)	1.2053E-3
+	V_MPP (V)	0.31959
+	J_MPP (A/cm²)	9.03369E-4
+	P_MPP (W/cm²)	2.88704E-4
+	Rs (Ohm)	5.68E+1
+	R// (Ohm)	1.66E+3
+	FF (%)	55.999
+	Eff (%)	0.289
 
 	## Data ##
-	Scan	Voc	Jsc	V_MPP	J_MPP	P_MPP	Rs	R//	FF	Eff
-		V	mA/cm²	V	mA/cm²	mW/cm²	Ohm	Ohm	%	%
-	FW	-1.230104	-3.021945	-0.655025	-1.666126	1.091354	2.94E+2	5.65E+2	29.36	11.73
-	RV	0.761543	1.087563	0.374948	0.521392	0.195495	7.84E+2	6.26E+2	23.60	2.10
-										
-	V_FW (V)	J_FW (mA/cm²)	V_RV (V)	J_RV (mA/cm²)						
-	-3.187902E+0	7.089213E+0	6.761269E+0	-1.309565E+1						
-	-6.326601E+0	1.234149E+1	8.817806E+0	-1.625949E+1						
-	-8.570556E+0	1.588318E+1	9.645930E+0	-1.715583E+1						
+	V_FW (V)	J_FW (A/cm²)	V_RV (V)	J_RV (A/cm²)
+	-7.79197E-2	1.25566E-3	4.76568E-1	-1.35698E-3
+	-5.72929E-2	1.24190E-3	4.58934E-1	-7.10248E-4
+	-3.83118E-2	1.22759E-3	4.38779E-1	-2.26132E-4
+	-1.70949E-2	1.21721E-3	4.19906E-1	1.39897E-4
+	2.08288E-3	1.20497E-3	3.99207E-1	3.99430E-4
 	...
 	```
 
@@ -128,7 +174,7 @@ Below you can find several example header structures based on which settings are
 	Test	Stability (JV)
 	Date	2026-02-24
 	Time	11:49:25
-	Temperature	355.01
+	Temperature	25.63
 	Note	SMU 1A
 
 	[Channel Settings]
@@ -159,27 +205,47 @@ Below you can find several example header structures based on which settings are
 	[Day-Night Settings]
 	Sensor	lum
 	Unit	mW/cm²
-	Threshold Value	5
-	Threshold Duration	0
-	Night Algorithm	Fixed Voltage (no track)
+	Threshold Value	10
+	Threshold Duration	5
+	Night Algorithm	Fixed Voltage
 	Night JV	Disable
-	Constant Output	0.2
+	Constant Output	0
 
 	[Environment]
-	Irradiance (mW/cm²)	9.30
-	Temperature (°C)	355.01
-	Humidity (%)	225.08
+	Irradiance (mW/cm²)	98.13
+	Temperature (°C)	25.63
+	Humidity (%)	56.2
+
+	## Parameters ##
+	[Forward]
+	Voc (V)	0.42734
+	Jsc (A/cm²)	1.2063E-3
+	V_MPP (V)	0.31782
+	J_MPP (A/cm²)	9.08699E-4
+	P_MPP (W/cm²)	2.88804E-4
+	Rs (Ohm)	5.70E+1
+	R// (Ohm)	1.70E+3
+	FF (%)	56.024
+	Eff (%)	0.289
+
+	[Reverse]
+	Voc (V)	0.42772
+	Jsc (A/cm²)	1.2053E-3
+	V_MPP (V)	0.31959
+	J_MPP (A/cm²)	9.03369E-4
+	P_MPP (W/cm²)	2.88704E-4
+	Rs (Ohm)	5.68E+1
+	R// (Ohm)	1.66E+3
+	FF (%)	55.999
+	Eff (%)	0.289
 
 	## Data ##
-	Scan	Voc	Jsc	V_MPP	J_MPP	P_MPP	Rs	R//	FF	Eff
-		V	mA/cm²	V	mA/cm²	mW/cm²	Ohm	Ohm	%	%
-	FW	-1.230104	-3.021945	-0.655025	-1.666126	1.091354	2.94E+2	5.65E+2	29.36	11.73
-	RV	0.761543	1.087563	0.374948	0.521392	0.195495	7.84E+2	6.26E+2	23.60	2.10
-										
-	V_FW (V)	J_FW (mA/cm²)	V_RV (V)	J_RV (mA/cm²)						
-	-3.187902E+0	7.089213E+0	6.761269E+0	-1.309565E+1						
-	-6.326601E+0	1.234149E+1	8.817806E+0	-1.625949E+1						
-	-8.570556E+0	1.588318E+1	9.645930E+0	-1.715583E+1						
+	V_FW (V)	J_FW (A/cm²)	V_RV (V)	J_RV (A/cm²)
+	-7.79197E-2	1.25566E-3	4.76568E-1	-1.35698E-3
+	-5.72929E-2	1.24190E-3	4.58934E-1	-7.10248E-4
+	-3.83118E-2	1.22759E-3	4.38779E-1	-2.26132E-4
+	-1.70949E-2	1.21721E-3	4.19906E-1	1.39897E-4
+	2.08288E-3	1.20497E-3	3.99207E-1	3.99430E-4
 	...
 	```
 
