@@ -17,7 +17,7 @@
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/img/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
@@ -115,8 +115,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="https://docs.cicciresearch.it/" title="Arkeo Multichannel Manual (v2.5.0)" class="md-header__button md-logo" aria-label="Arkeo Multichannel Manual (v2.5.0)" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+  <img src="../../assets/img/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -241,8 +240,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="https://docs.cicciresearch.it/" title="Arkeo Multichannel Manual (v2.5.0)" class="md-nav__button md-logo" aria-label="Arkeo Multichannel Manual (v2.5.0)" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+  <img src="../../assets/img/logo.png" alt="logo">
 
     </a>
     Arkeo Multichannel Manual (v2.5.0)
@@ -873,6 +871,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#cell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#channel" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -899,17 +908,6 @@
     <span class="md-ellipsis">
       
         Tracking
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cell" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cell
       
     </span>
   </a>
@@ -1382,6 +1380,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#cell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#channel" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1408,17 +1417,6 @@
     <span class="md-ellipsis">
       
         Tracking
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cell" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cell
       
     </span>
   </a>
@@ -1542,6 +1540,54 @@ Each category contains a table for quick lookup, followed by an optional expanda
 </tr>
 </tbody>
 </table>
+<h3 id="cell">Cell<a class="headerlink" href="#cell" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Example</strong></th>
+<th><strong>Unit</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>Cell Type</td>
+<td>Cell</td>
+<td></td>
+<td>enum</td>
+</tr>
+<tr>
+<td>InvertedStructure</td>
+<td>Inverts the applied voltage</td>
+<td>false</td>
+<td></td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>Area (cm2)</td>
+<td>Area of the cell</td>
+<td>1</td>
+<td>cm²</td>
+<td>float</td>
+</tr>
+<tr>
+<td>NrCells</td>
+<td>Number of cells</td>
+<td>1</td>
+<td></td>
+<td>integer</td>
+</tr>
+</tbody>
+</table>
+<details class="info" open="open">
+<summary>Additional notes on Channel settings</summary>
+<ul>
+<li><strong>InvertedStructure:</strong> Use this when the device polarity is physically reversed.</li>
+</ul>
+</details>
 <h3 id="channel">Channel<a class="headerlink" href="#channel" title="Permanent link">¶</a></h3>
 <table>
 <thead>
@@ -1568,13 +1614,6 @@ Each category contains a table for quick lookup, followed by an optional expanda
 <td></td>
 <td>integer</td>
 </tr>
-<tr>
-<td>InvertedStructure</td>
-<td>Inverts the applied voltage</td>
-<td>false</td>
-<td></td>
-<td>boolean</td>
-</tr>
 </tbody>
 </table>
 <details class="info" open="open">
@@ -1582,7 +1621,6 @@ Each category contains a table for quick lookup, followed by an optional expanda
 <ul>
 <li><strong>VoltageLimit:</strong> Default is 10 V. Can be extend to 20 V by using 2 SMUs, for more detail see <a href="../../hardware/smu-introduction/#20-v-extension">Source Meter Boards/20 V Extension</a>.</li>
 <li><strong>CurrentLimit:</strong> Higher ranges allow larger currents but reduce resolution.  </li>
-<li><strong>InvertedStructure:</strong> Use this when the device polarity is physically reversed.</li>
 </ul>
 </details>
 <h3 id="jv">JV<a class="headerlink" href="#jv" title="Permanent link">¶</a></h3>
@@ -1677,13 +1715,6 @@ Each category contains a table for quick lookup, followed by an optional expanda
 <td>enum</td>
 </tr>
 <tr>
-<td>Perturbation (V)</td>
-<td>Voltage differential for the tracking algorithm</td>
-<td>0.01</td>
-<td>V</td>
-<td>float</td>
-</tr>
-<tr>
 <td>ConstantOutput</td>
 <td>Setting to maintain a constant output</td>
 <td>0.2</td>
@@ -1712,6 +1743,13 @@ Each category contains a table for quick lookup, followed by an optional expanda
 <td>enum</td>
 </tr>
 <tr>
+<td>JV Timing</td>
+<td>Relative to test start or last JV</td>
+<td>Absolute</td>
+<td></td>
+<td>enum</td>
+</tr>
+<tr>
 <td>TestDuration.Value</td>
 <td>Duration of the tracking test</td>
 <td>100</td>
@@ -1731,7 +1769,6 @@ Each category contains a table for quick lookup, followed by an optional expanda
 <summary>Additional notes on Tracking settings</summary>
 <ul>
 <li><strong>TrackEnable:</strong> When disabled, the system performs only a single JV.  </li>
-<li><strong>Perturbation:</strong> Smaller values give smoother tracking but slower convergence. Not that a too small value can cause the system to track the signal noise instead of the device signal</li>
 <li><strong>SaveInterval:</strong> Determines how often data is logged; lower values = larger file size.  </li>
 <li><strong>jvInterval:</strong> Automatic JV intervals allow stability studies during long tracking tests. </li>
 </ul>
@@ -1739,49 +1776,13 @@ Each category contains a table for quick lookup, followed by an optional expanda
 <details class="info">
 <summary>Tracking Algorithms</summary>
 <ul>
+<li>MPPT  </li>
 <li>Open circuit  </li>
 <li>Short circuit  </li>
-<li>MPPT  </li>
 <li>Fixed Voltage  </li>
-<li>Fixed Voltage (no track)  </li>
 <li>Fixed Current  </li>
 </ul>
 </details>
-<h3 id="cell">Cell<a class="headerlink" href="#cell" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th><strong>Parameter</strong></th>
-<th><strong>Description</strong></th>
-<th><strong>Example</strong></th>
-<th><strong>Unit</strong></th>
-<th><strong>Type</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>Cell Type</td>
-<td>Cell</td>
-<td></td>
-<td>enum</td>
-</tr>
-<tr>
-<td>Area (cm2)</td>
-<td>Area of the cell</td>
-<td>1</td>
-<td>cm²</td>
-<td>float</td>
-</tr>
-<tr>
-<td>NrCells</td>
-<td>Number of cells</td>
-<td>1</td>
-<td></td>
-<td>integer</td>
-</tr>
-</tbody>
-</table>
 
 
 
@@ -1817,7 +1818,7 @@ Each category contains a table for quick lookup, followed by an optional expanda
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright © 2026 Cicci Research s.r.l. – <a href="#__consent">Change cookie settings</a>
+      Copyright © 2026 Cicci Research s.r.l. - <a href="#__consent">Change cookie settings</a>
     </div>
   
   
