@@ -2,6 +2,8 @@ site_name: Arkeo Multichannel Manual (v2.5.0)
 
 theme:
   name: material
+  logo: assets/img/logo.png
+  favicon: assets/img/logo.png
   icon:
     annotation: material/arrow-right-circle 
   features:
@@ -9,6 +11,7 @@ theme:
     - navigation.sections
     - navigation.instant
     - navigation.top
+    - navigation.path
     - search.highlight
     - search.suggest
     - content.footnote.tooltips
@@ -108,5 +111,17 @@ extra_css:
   - assets/css/compact-tables.css
   - assets/css/extra.css
   - https://unpkg.com/katex@0/dist/katex.min.css
+
+extra:
+  homepage: https://docs.cicciresearch.it/
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
+copyright: Copyright &copy; 2026 Cicci Research s.r.l. - <a href="#__consent">Change cookie settings</a>
 
 site_url: https://docs.cicciresearch.it/arkeo-multichannel-manual/

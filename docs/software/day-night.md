@@ -6,9 +6,8 @@ To setup the day-night cycling
 go to the Day-Night tab in the [settings](settings.md) window.  
  - Select a sensor from the drop down menu.  
  - Confirm that the value of the sensor is updated correctly.  
- - Select the day-night threshold value. An optional delay can be configured. This is generally recommended to avoid a single spike causing a false transition. The sensor has to be below/above the threshold for the entire delay time in order to switch state.  
+ - Select the day-night threshold value. An optional delay can be configured. This is generally recommended to avoid a single spike causing a false transition. The sensor has to be below/above the threshold for the entire delay time in order to switch states.  
  - By default, the system places the devices in Voc during night. This can be configured as needed.
-
 
 !!! Warning "Enable the channel"
 	The Day-Night tab configures the system-wide settings for the day-night cycling. Each channel must also be setup in the [settings](settings.md) to enable to the day-night cycling. This can be done with "Use Global" option or be configured with channel specific settings using the "Configure button."

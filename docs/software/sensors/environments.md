@@ -14,5 +14,6 @@ To create a new environment and add sensors to it follow these steps
 ### Linking a device to an environment ###
 
 To associate a device to an environment, open the settings window and select the device's channel. From the "Environment" drop-down select the environment you just created. This list is dynamically updated as you create and delete environments from the sensor manager window.  
+
 Once an environment is selected, start a measurement and note the additional sensor data appear in the data files.  
 The JV files will contain an additional header section with all sensor data at the time of the JV scan. The tracking files will have an additional column for each sensor.  

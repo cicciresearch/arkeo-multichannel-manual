@@ -3,8 +3,6 @@
 The measurement settings are organized into **five categories**.  
 Each category contains a table for quick lookup, followed by an optional expandable section for deeper explanations.
 
-
-
 ### General ###
 
 | **Parameter** | **Description**                 | **Example** | **Unit** | **Type** |
@@ -13,6 +11,18 @@ Each category contains a table for quick lookup, followed by an optional expanda
 | User          | Name of the user                | User        |          | string   |
 | Device        | Device Name                     | Sample      |          | string   |
 | Note          | Free to use field for comments  |             |          | string   |
+    
+### Cell ###
+
+| **Parameter**    | **Description**         | **Example** | **Unit** | **Type** |
+| ---------------- | ----------------------- | ----------- | -------- | -------- |
+| Type             | Cell Type               | Cell        |          | enum     |
+| InvertedStructure | Inverts the applied voltage | false       |          | boolean  |
+| Area (cm2)       | Area of the cell        | 1           | cm²      | float    |
+| NrCells          | Number of cells         | 1           |          | integer  |
+
+???+ info "Additional notes on Channel settings"
+    - **InvertedStructure:** Use this when the device polarity is physically reversed.
 
 ### Channel ###
 
@@ -20,12 +30,10 @@ Each category contains a table for quick lookup, followed by an optional expanda
 | ----------------- | --------------------------- | ----------- | -------- | -------- |
 | VoltageLimit      | Maximum Voltage             | 10 V        |          | enum     |
 | CurrentLimit      | Current Range               | 0           |          | integer  |
-| InvertedStructure | Inverts the applied voltage | false       |          | boolean  |
 
 ???+ info "Additional notes on Channel settings"
     - **VoltageLimit:** Default is 10 V. Can be extend to 20 V by using 2 SMUs, for more detail see [Source Meter Boards/20 V Extension](../hardware/smu-introduction.md#20-v-extension).
     - **CurrentLimit:** Higher ranges allow larger currents but reduce resolution.  
-    - **InvertedStructure:** Use this when the device polarity is physically reversed.
 
 ### JV ###
 
@@ -50,33 +58,22 @@ Each category contains a table for quick lookup, followed by an optional expanda
 | ------------------ | ----------------------------------------------- | ----------- | -------- | -------- |
 | TrackEnable        | Enables tracking                                | true        |          | boolean  |
 | Algorithm          | Specifies the algorithm used for tracking       | MPPT        |          | enum     |
-| Perturbation (V)   | Voltage differential for the tracking algorithm | 0.01        | V        | float    |
 | ConstantOutput     | Setting to maintain a constant output           | 0.2         | *        | float    |
 | SaveInterval (s)   | Time between saved data points                  | 10          | s        | integer  |
 | jvInterval.Value   | Time between JV scans                           | 10          |          | float    |
 | jvInterval.Unit    | Unit for JV interval                            | min         |          | enum     |
+| JV Timing          | Relative to test start or last JV               | Absolute    |          | enum     |
 | TestDuration.Value | Duration of the tracking test                   | 100         |          | float    |
 | TestDuration.Unit  | Unit for Test Duration                          | hours       |          | enum     |
 
 ???+ info "Additional notes on Tracking settings"
     - **TrackEnable:** When disabled, the system performs only a single JV.  
-    - **Perturbation:** Smaller values give smoother tracking but slower convergence. Not that a too small value can cause the system to track the signal noise instead of the device signal
     - **SaveInterval:** Determines how often data is logged; lower values = larger file size.  
     - **jvInterval:** Automatic JV intervals allow stability studies during long tracking tests. 
 
 ??? info "Tracking Algorithms"
+    - MPPT  
     - Open circuit  
     - Short circuit  
-    - MPPT  
     - Fixed Voltage  
-    - Fixed Voltage (no track)  
     - Fixed Current  
-    
-### Cell ###
-
-| **Parameter**    | **Description**         | **Example** | **Unit** | **Type** |
-| ---------------- | ----------------------- | ----------- | -------- | -------- |
-| Type             | Cell Type               | Cell        |          | enum     |
-| Area (cm2)       | Area of the cell        | 1           | cm²      | float    |
-| NrCells          | Number of cells         | 1           |          | integer  |
-

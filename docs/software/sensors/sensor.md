@@ -1,7 +1,7 @@
 The Arkeo Multichannel software can manage analog and digital sensor as part of the measurements. This allows you to include the environment of the device into the data files. This can be especially important for the irradiance and temperature of the device, which greatly affect its performance.
 
 ![sensor-manager](../../assets/img/sensor-manager.png){ .on-glb }
-Sensors are managed in the "Sensor Manager" window. It is accessed from the main windows with the "Sensors" button. Here you will see a list of all sensors currently configured for the system. To associate them to your device, see [environments](environments.md).
+Sensors are managed in the "Sensor Manager" window. It is accessed from the main window with the "Sensors" button. Here you will see a list of all sensors currently configured for the system. To associate them to your device, see [environments](environments.md).
 
 All sensors save their data at regular intervals to a dedicated save file. See [Data File](data-file.md).
 
@@ -21,7 +21,7 @@ These sensors can be configured with a gain and offset according the following f
 $$
 \text{value} = V_{in} \cdot \text{gain} + \text{offset}
 $$
-Sensors with custom conversion functions can be requested.
+Sensors with custom conversion functions can be implemented on request.
 
 ## Supported Sensors
 
@@ -79,6 +79,14 @@ The following specific sensors are avaible. Custom models can be included on req
     Any generic sensor with the following transfer function
     $$
     O_2(V) = \text{gain} \cdot V + \text{offset}
+    $$
+
+### CO2 Sensors
+
+=== "Generic"
+    Any generic sensor with the following transfer function
+    $$
+    CO_2(V) = \text{gain} \cdot V + \text{offset}
     $$
 
 ## Sensor Board Pinout

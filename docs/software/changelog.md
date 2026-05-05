@@ -115,5 +115,7 @@ Initial version
 	- Other modes now use a proportional algorithm instead of a perturb and observe algorithm to apply the setpoint ([details](measurement/tracking.md#fixed-setpoint))
 - Removed `Fixed Voltage (no track)`
 
-#### v2.5.1 - 2026-
+#### v2.5.1 - 2026-04-30
 - Added live power indicator under the graphs
+- Added environment ramp
+- Added `JV Timing` option in the tracking settings
